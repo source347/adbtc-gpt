@@ -208,3 +208,215 @@
         <button id="themeToggle" class="btn" aria-pressed="false" aria-label="Toggle day/night">Toggle Day/Night</button>
         <select id="colorPicker" class="btn" aria-label="Change accent color">
           <option value="#7c4dff,#00d4ff" selected>Violet + Aqua</option>
+          <option value="#ff6b6b,#ffd93d">Coral + Sun</option>
+          <option value="#22c55e,#10b981">Emerald + Jade</option>
+          <option value="#0ea5e9,#38bdf8">Sky + Ice</option>
+          <option value="#f97316,#fb923c">Orange Heat</option>
+        </select>
+        <a class="btn cta" href="https://r.adbtc.top/1169353" target="_blank" rel="noopener nofollow" aria-label="Join now via referral">Join Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="card reveal">
+        <span class="tag">Start in minutes</span>
+        <h1><b>Earn Micro‑Rewards the Smart, Simple Way</b></h1>
+        <p>
+          Looking for a quick, low‑barrier way to test earning online? With this streamlined micro‑rewards platform, you can start collecting small payouts for easy actions—no advanced skills required. Through my referral link, you’ll unlock a clean start and helpful tips to avoid rookie mistakes. Click <a href="https://r.adbtc.top/1169353" target="_blank" rel="noopener nofollow"><b>Join Now</b></a> to get going in just a few minutes.
+        </p>
+        <div class="features">
+          <div class="feature">
+            <h2><b>Why It Works</b></h2>
+            <p>
+              Micro‑rewards add up when you’re consistent. Short sessions, steady clicks, and realistic goals help you compound small gains. The dashboard is simple, the rules are clear, and cash‑outs are straightforward.
+            </p>
+          </div>
+          <div class="feature">
+            <h2><b>What You’ll Do</b></h2>
+            <p>
+              Engage with bite‑size tasks, view offers, and track progress live. It’s a practical way to turn spare moments into measurable results while learning how online incentives work.
+            </p>
+          </div>
+          <div class="feature">
+            <h2><b>Pro Tips</b></h2>
+            <p>
+              Set a daily session limit, avoid distractions, and focus on the highest‑value tasks first. Withdraw on a schedule and log results weekly so you can see momentum.
+            </p>
+          </div>
+        </div>
+        <div class="callout">
+          <div class="card">
+            <h2><b>Ready to Try?</b></h2>
+            <p>
+              Start with my referral link and tap the simple earning flow thousands already use. Transparent rules, a clean interface, and fast onboarding keep things smooth.
+              When you’re set, return here for the mini‑game break below—because even focused grinders deserve a little fun between sessions.
+            </p>
+            <a class="btn cta" href="https://r.adbtc.top/1169353" target="_blank" rel="noopener nofollow"><b>Join via My Referral</b></a>
+          </div>
+          <div class="card">
+            <h2><b>Fair Reminder</b></h2>
+            <p>
+              This is not a get‑rich scheme—just a simple, incremental system. Stay consistent, follow platform guidelines, and never risk funds you can’t afford to set aside. If you like no‑nonsense earning experiments, this is for you.
+            </p>
+            <p>
+              Tip: Bookmark your dashboard, set a 10‑minute timer, and track your average reward per session. Improvement comes from iteration.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="shapes card reveal" aria-hidden="true">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+      </div>
+    </section>
+
+    <section class="card reveal" style="margin-top: 26px;">
+      <h2><b>Take a Focus Break: Mini Jump Game</b></h2>
+      <p class="muted">Press Space or Click/Tap inside the game to jump. Avoid the moving block. Score increases over time—reset on collision.</p>
+      <div class="game-wrap" id="game" role="application" aria-label="Jump game">
+        <div class="hint">Space/Click to jump</div>
+        <div class="score" id="score">0</div>
+        <div class="player" id="player" aria-label="Player"></div>
+        <div class="obstacle" id="obstacle" aria-hidden="true"></div>
+        <div class="ground" aria-hidden="true"></div>
+      </div>
+      <div style="margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap;">
+        <a class="btn" href="https://r.adbtc.top/1169353" target="_blank" rel="noopener nofollow"><b>Open Referral in New Tab</b></a>
+        <a class="btn cta" href="https://r.adbtc.top/1169353" target="_blank" rel="noopener nofollow"><b>Get Started</b></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      © <span id="year"></span> QuickMicro Rewards — Independent referral page. Always review platform terms. 
+      Join here: <a href="https://r.adbtc.top/1169353" target="_blank" rel="noopener nofollow"><b>r.adbtc.top/1169353</b></a>
+    </p>
+  </footer>
+
+  <script>
+    // Configuration
+    const REF_LINK = "https://r.adbtc.top/1169353";
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle (persisted)
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') document.body.classList.add('light');
+    themeToggle.setAttribute('aria-pressed', savedTheme === 'light');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+      const isLight = document.body.classList.contains('light');
+      themeToggle.setAttribute('aria-pressed', isLight);
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+
+    // Accent color changer (persisted)
+    const colorPicker = document.getElementById('colorPicker');
+    const savedAccent = localStorage.getItem('accentPair');
+    if (savedAccent) {
+      const [a1, a2] = savedAccent.split(',');
+      document.documentElement.style.setProperty('--accent', a1);
+      document.documentElement.style.setProperty('--accent-2', a2);
+      // set dropdown to saved value if exists in options
+      [...colorPicker.options].forEach(opt => { if (opt.value === savedAccent) colorPicker.value = savedAccent; });
+    }
+    colorPicker.addEventListener('change', (e) => {
+      const [a1, a2] = e.target.value.split(',');
+      document.documentElement.style.setProperty('--accent', a1);
+      document.documentElement.style.setProperty('--accent-2', a2);
+      localStorage.setItem('accentPair', e.target.value);
+    });
+
+    // Smooth reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => io.observe(el));
+
+    // Lightweight analytics: convert all CTA hrefs from REF_LINK const
+    document.querySelectorAll('a').forEach(a => {
+      if (a.href.includes('adbtc')) a.href = REF_LINK;
+    });
+
+    // Mini Jump Game
+    const game = document.getElementById('game');
+    const player = document.getElementById('player');
+    const obstacle = document.getElementById('obstacle');
+    const scoreEl = document.getElementById('score');
+
+    let vy = 0;           // vertical velocity
+    let y = 4;            // bottom offset in px
+    let grounded = true;
+    let score = 0;
+    let alive = true;
+    let last = performance.now();
+
+    function resetGame() {
+      y = 4; vy = 0; grounded = true; score = 0; alive = true;
+      scoreEl.textContent = '0';
+      obstacle.style.animation = 'none';
+      // Force reflow to restart animation
+      void obstacle.offsetWidth;
+      obstacle.style.animation = 'move 2s linear infinite';
+    }
+
+    function jump() {
+      if (!alive) { resetGame(); return; }
+      if (grounded) {
+        vy = 10; // jump impulse
+        grounded = false;
+      }
+    }
+
+    function loop(t) {
+      const dt = Math.min((t - last) / 1000, 0.033);
+      last = t;
+
+      // Gravity
+      if (!grounded) {
+        vy -= 28 * dt; // gravity
+        y += vy;
+        if (y <= 4) { y = 4; vy = 0; grounded = true; }
+        player.style.bottom = y + 'px';
+      }
+
+      // Score
+      if (alive) {
+        score += dt * 10;
+        scoreEl.textContent = Math.floor(score);
+      }
+
+      // Collision detection (simple AABB)
+      const pRect = player.getBoundingClientRect();
+      const oRect = obstacle.getBoundingClientRect();
+      if (alive &&
+          pRect.left < oRect.right &&
+          pRect.right > oRect.left &&
+          pRect.bottom > oRect.top &&
+          pRect.top < oRect.bottom) {
+        alive = false;
+        scoreEl.textContent = '💥 ' + Math.floor(score);
+        obstacle.style.animation = 'none';
+      }
+
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+
+    // Controls
+    window.addEventListener('keydown', (e) => { if (e.code === 'Space') { e.preventDefault(); jump(); } });
+    game.addEventListener('pointerdown', () => jump());
+  </script>
+</body>
+</html>
