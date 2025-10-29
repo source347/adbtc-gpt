@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Earn Smarter: Fast Micro-Rewards with a Few Clicks</title>
+  <meta name="description" content="Join a simple micro-rewards platform through my referral link. Start earning small rewards, learn proven tips, and enjoy a fun built-in mini-game. Toggle day/night, switch colors, and explore smooth animations." />
+  <meta name="keywords" content="earn online, micro-rewards, referral, passive income, click ads, crypto faucets, side hustle" />
+  <link rel="canonical" href="https://r.adbtc.top/1169353" />
+
+  <style>
+    :root {
+      --bg: #0f1221;
+      --bg-2: #131735;
+      --text: #e9eef6;
+      --muted: #a7b3c7;
+      --card: #171b3f;
+      --accent: #7c4dff; /* default accent */
+      --accent-2: #00d4ff;
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --radius: 16px;
+    }
+    /* Light theme variables (switched via .light class on body) */
+    body.light {
+      --bg: #f7f9fc;
+      --bg-2: #ffffff;
+      --text: #0e1526;
+      --muted: #53627c;
+      --card: #ffffff;
+      --shadow: 0 10px 30px rgba(30,45,80,0.12);
+    }
+
+    /* Global reset and typography */
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(124,77,255,0.25), transparent 60%),
+                  radial-gradient(1200px 800px at 10% 110%, rgba(0,212,255,0.25), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      position: sticky; top: 0; z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: color-mix(in oklab, var(--bg-2) 70%, transparent);
+      border-bottom: 1px solid color-mix(in oklab, var(--accent) 15%, transparent);
+    }
+    .nav {
+      max-width: 1100px; margin: 0 auto; padding: 14px 20px;
+      display: flex; align-items: center; gap: 14px; justify-content: space-between;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.3px; }
+    .logo {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: var(--shadow);
+      transform: rotate(6deg);
+      transition: transform .3s ease;
+    }
+    .brand:hover .logo { transform: rotate(0deg) scale(1.04); }
+
+    .controls {
+      display: flex; gap: 10px; align-items: center;
+    }
+    .btn {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid color-mix(in oklab, var(--accent) 25%, transparent);
+      padding: 10px 14px; border-radius: 10px;
+      cursor: pointer; transition: transform .15s ease, background .3s ease, border-color .3s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+
+    .cta {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border: none; color: white; font-weight: 700;
+      box-shadow: var(--shadow);
+    }
+
+    main { max-width: 1100px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    .hero {
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center;
+      margin-top: 20px;
+    }
+    .card {
+      background: color-mix(in oklab, var(--card) 90%, transparent);
+      border: 1px solid color-mix(in oklab, var(--accent) 18%, transparent);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .tag {
+      display: inline-block; padding: 6px 10px; border-radius: 999px;
+      background: color-mix(in oklab, var(--accent) 20%, transparent);
+      color: var(--text); font-size: 12px; letter-spacing: 0.3px;
+      border: 1px solid color-mix(in oklab, var(--accent) 30%, transparent);
+    }
+    h1 { font-size: 44px; line-height: 1.15; margin: 12px 0 8px; }
+    h2 { font-size: 28px; margin: 0 0 12px; }
+    p { color: var(--muted); }
+
+    /* Floating shapes for hero animation */
+    .shapes {
+      position: relative; height: 320px; border-radius: var(--radius);
+      background: radial-gradient(350px 220px at 70% 30%, color-mix(in oklab, var(--accent) 35%, transparent), transparent 70%),
+                  linear-gradient(180deg, color-mix(in oklab, var(--bg-2) 65%, transparent), transparent);
+      overflow: hidden;
+    }
+    .bubble {
+      position: absolute; border-radius: 50%; opacity: 0.8; filter: blur(0.2px);
+      animation: float 12s ease-in-out infinite;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2) inset;
+    }
+    .bubble:nth-child(1){ width: 80px; height: 80px; left: 10%; top: 50%; background: var(--accent); animation-delay: 0s; }
+    .bubble:nth-child(2){ width: 120px; height: 120px; left: 55%; top: 20%; background: var(--accent-2); animation-delay: 1.2s; }
+    .bubble:nth-child(3){ width: 60px; height: 60px; left: 75%; top: 65%; background: color-mix(in oklab, var(--accent) 50%, var(--accent-2)); animation-delay: 2.4s; }
+    .bubble:nth-child(4){ width: 40px; height: 40px; left: 30%; top: 15%; background: var(--accent); animation-delay: 0.6s; }
+    @keyframes float {
+      0%,100% { transform: translateY(0) translateX(0) scale(1); }
+      50% { transform: translateY(-20px) translateX(8px) scale(1.05); }
+    }
+
+    /* Feature list */
+    .features { margin-top: 28px; display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .feature { position: relative; padding-left: 14px; }
+    .feature::before {
+      content: ""; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 20%, transparent);
+    }
+
+    /* Callout section */
+    .callout {
+      margin-top: 30px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+
+    /* Game panel */
+    .game-wrap {
+      position: relative; height: 200px; border-radius: var(--radius);
+      background: linear-gradient(180deg, color-mix(in oklab, var(--bg-2) 90%, transparent), transparent);
+      overflow: hidden; border: 1px dashed color-mix(in oklab, var(--accent) 30%, transparent);
+    }
+    .ground { position: absolute; left:0; right:0; bottom: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+    .player {
+      position: absolute; width: 32px; height: 32px; left: 40px; bottom: 4px;
+      background: radial-gradient(circle at 30% 30%, #fff, color-mix(in oklab, var(--accent) 30%, #000));
+      border-radius: 6px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transform: translateZ(0);
+    }
+    .obstacle {
+      position: absolute; width: 18px; height: 38px; right: -40px; bottom: 4px;
+      background: linear-gradient(135deg, var(--accent-2), var(--accent));
+      border-radius: 4px;
+      animation: move 2s linear infinite;
+    }
+    @keyframes move {
+      from { right: -40px; }
+      to { right: 110%; }
+    }
+    .score {
+      position: absolute; right: 10px; top: 10px; font-weight: 700; color: var(--text);
+      background: color-mix(in oklab, var(--bg-2) 80%, transparent);
+      padding: 6px 10px; border-radius: 999px; border: 1px solid color-mix(in oklab, var(--accent) 25%, transparent);
+    }
+    .hint {
+      position: absolute; left: 10px; top: 10px; font-size: 12px; color: var(--muted);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid color-mix(in oklab, var(--accent) 18%, transparent);
+      padding: 24px 20px; text-align: center; color: var(--muted);
+      background: color-mix(in oklab, var(--bg-2) 70%, transparent);
+    }
+
+    /* Scroll reveal animation */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .callout { grid-template-columns: 1fr; }
+      .features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary">
+      <div class="brand" aria-label="Brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span>QuickMicro Rewards</span>
+      </div>
+      <div class="controls">
+        <button id="themeToggle" class="btn" aria-pressed="false" aria-label="Toggle day/night">Toggle Day/Night</button>
+        <select id="colorPicker" class="btn" aria-label="Change accent color">
+          <option value="#7c4dff,#00d4ff" selected>Violet + Aqua</option>
